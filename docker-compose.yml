@@ -6,3 +6,6 @@ services:  # 컨테이너의 서비스라는 것을 정의
     build: .  # 현재 파일 위치에 있는 Dockerfile을 사용해 빌드
     ports:
     - "80:80"  # 컨테이너 내부 80 포트와 호스트OS에서 공개할 80포트를 연결
+    volumes:
+    - /var/jenkins_home
+    - /var/run/docker.sock:/var/run/docker.sock
